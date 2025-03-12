@@ -247,3 +247,53 @@ footer {
     }
     
 }
+  .bento-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      padding: 2rem 0;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 90%;
+  }
+
+  .bento-item {
+      border-radius: 1rem;
+      overflow: hidden;
+      position: relative;
+      height: 250px; /* Set a fixed height for standard items */
+  }
+
+  .bento-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .bento-item.large {
+      grid-column: span 2;
+      grid-row: span 2;
+      height: 500px; /* Double height for large items */
+  }
+
+  .bento-item.wide {
+      grid-column: span 2;
+      height: 250px;
+  }
+
+  .bento-item.tall {
+      grid-row: span 2;
+      height: 500px;
+  }
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .bento-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .bento-item.large,
+    .bento-item.wide {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}

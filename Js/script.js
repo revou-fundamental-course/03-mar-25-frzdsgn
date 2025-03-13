@@ -58,5 +58,5 @@ function showSlides() {
         setTimeout(showSlides, 3000); // Change slide every 3 seconds
 }
 
-// Start the slideshow when the page loads
+
 document.addEventListener('DOMContentLoaded', showSlides);
